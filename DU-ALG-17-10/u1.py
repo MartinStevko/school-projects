@@ -19,14 +19,17 @@ for i in range(n):
 
 # Algoritmus stabilneho parovania
 while True in odmietnutia:
+    # Podanie navrhov od muzov zenam
     for i in range(n):
         if odmietnutia[i]:
             navrhy[m[i][0]].append(i)
             del m[i][0]
             odmietnutia[i] = False
 
+    # Vyhodnotenie navrhov
     for key in navrhy:
         mi = None
+        # Ponechanie najlepsieho navrhu a odmietnutie zvysku
         for i in navrhy[key]:
             if mi is None:
                 mi = i
@@ -39,6 +42,7 @@ while True in odmietnutia:
         if mi:
             navrhy[key] = [mi]
 
+# Vypis navrhov
 print('(M, Z) = ', end='')
 for k in navrhy:
     if k != n-1:

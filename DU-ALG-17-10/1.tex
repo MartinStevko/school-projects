@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Naprogramovaný algoritmus je v súbore $u1.py$.
+
+Algoritmom, ktorý hľadá stabilné párovanie je napríklad tento:
+\begin{itemize}
+    \item v každom kole každý muž, ktorého si žena "neodložila" pošle 
+    návrh žene, ktorej ešte návrh neposielal
+    \item každá žena, ktorej prišli nejaké návrhy si nechá najlepší 
+    z nich a zvyšné odmietne
+    \item po najviac $n$ kolách algoritmus skončí, pričom každá žena 
+    bude mať priradeného práve 1 muža a toto párovanie bude stabilné.
+\end{itemize}
+
+Teraz musím dokázať 3 veci -- algoritmus skončí, skončí po najviac 
+$n^2-n+1$ krokoch a párovanie, ktoré vznikne bude stabilné. 
+
+Keďže v každom kole je po podaní návrhov $n$ neodmietnutých návrhov, 
+existujú 2 možnosti. Buď má každá žena návrh od práve 1 muža a vtedy 
+algoritmus skončí, alebo má nejaké žena viacero návrhov. Ak nastala 
+druhá situácia, táto žena všetky okrem jedného zo svojich návrhov 
+odmietne, čím sa počet neodmietnutých návrhov zníži. Keďže počet 
+návrhov je konečný a v každom kole kedy sa algoritmus neskončí 
+sa ich počet zníži, algoritmus musí skončiť, najneskôr vtedy, keď 
+ostane práve $n$ zo všetkých neodmietnutých návrhov.
+
+Po4et možných návrhov na podanie je $n^2$. V prvom kole sa podá $n$ 
+návrhov. Ak by sa v každom ďalšom kole podal iba $1$ návrh, ako 
+som dokázal vyššie, návrhy sa vyčerpajú najviac po $n^2-n+1$ kolách 
+a teda najneskôr vtedy skončí aj celý algoritmus.
+
+Predstavme si situáciu v ktorej algoritmus skončí. Každý muž má podľa 
+jeho osobných preferencií najlepšiu ženu, ktorá ho neodmietla. 
+Žiaden muž teda pár chcieť meniť nebude (lebo všetky podľa neho lepšie 
+ženy ho odmietnu) a teda každý pár, čiže aj celé párovanie je stabilné. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

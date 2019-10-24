@@ -1,0 +1,245 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Dokument %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+%\usepackage[slovak]{babel}
+%\usepackage{a4wide}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{comment}
+\usepackage{enumitem}
+
+\usepackage{graphicx}   % obrazky
+\usepackage{wrapfig}    % obrazky
+
+\usepackage{caption}    % popisky
+\usepackage{subcaption} % popisky
+
+\usepackage{listings}   % python
+\usepackage{color}      % python
+
+\usepackage{array}      % column width
+\usepackage{calc}       % pocitanie vo funkciach (vspace,...)
+
+\usepackage[shellescape,latex]{gmp}     % metapost
+\usepackage{hyperref}   % url
+
+\usepackage{siunitx}    % stvorcek (QED)
+\setlength{\fboxsep}{.5\fboxsep}
+
+\usepackage{pgfplots}   % grafy
+\usepackage{pgf}        % grafy
+\pgfplotsset{compat=1.15}
+
+\usepackage{tikz}       % kreslenie
+
+\pagenumbering{gobble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Hlavicka a riesenie %%%%%%%%%%%%%%%%%%%%%%%%%
+\newcount\uloha
+\newtoks\meno
+\newtoks\skola
+
+\parindent=0pt
+\parskip=5pt
+
+\def\hlavicka{%
+    \the\meno \par
+    \the\skola \par
+    \underline{Úloha \the\uloha.} \par
+}
+
+\def\riesenie{%
+\parindent=20pt
+\parskip=5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Maticke makra %%%%%%%%%%%%%%%%%%%%%%%%%
+\def\n{{\mathbb N}}
+\def\z{{\mathbb Z}}
+\def\q{{\mathbb Q}}
+\def\r{{\mathbb R}}
+
+\def\vus#1{|{#1}|}
+\def\uh{\sphericalangle}
+\def\vu#1{|\sphericalangle #1|}
+\def\st{{}^\circ}
+
+\def\priamka#1{\overleftrightarrow{#1}}
+\def\vektor#1{\overrightarrow{(#1)}}
+
+\def\kolme{\perp}
+\def\rovnobezne{\mathop{\|}}
+\def\zhodny{\cong}
+\def\podobny{\sim}
+
+\def\obsah#1{{\mathrm S}_{#1}}
+\def\vzdialenost#1#2{\vus{{#1},{#2}}}
+
+\def\kongruentne{\equiv}
+\def\kong#1#2#3{$#1\equiv#2\pmod{#3}$}
+\def\deli{\mathop{|}}
+\def\nedeli{\mathop{\not|}}
+\def\dcc#1{\left\lfloor{#1}\right\rfloor}
+\def\hcc#1{\left\lceil{#1}\right\rceil}
+\def\alebo{\vee}
+\def\zaroven{\wedge}
+
+\def\mm{\mathrm{mm}}
+\def\cm{\mathrm{cm}}
+\def\dm{\mathrm{dm}}
+\def\m{\mathrm{m}}
+\def\km{\mathrm{km}}
+\def\kg{\mathrm{kg}}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Ine makra %%%%%%%%%%%%%%%%%%%%%%%%%
+\def\python#1{\lstinputlisting[language=Python]{#1}}
+
+\def\obr#1#2{%
+\begin{center}
+\includegraphics[width=#1\textwidth]{#2}
+\end{center}
+}
+
+\def\wrapobr#1#2#3#4#5#6{%
+\begin{wrapfigure}[#1]{#2}{#3\textwidth}
+\vspace{#4pt}
+\begin{center}
+\includegraphics[width=#5\textwidth]{images/#6}
+\end{center}
+\end{wrapfigure}
+}
+
+\def\wrapmpost#1#2#3#4#5#6{%
+\begin{wrapfigure}[#1]{#2}{#3\textwidth}
+\vspace{#4pt}
+\centering
+\resizebox{#5\textwidth}{!}{\input{images/#6}}
+\end{wrapfigure}
+}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\leftflushing\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\rightflushing\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\def\stvorcek#1{%
+\hspace{#1}\fbox{$\phantom{5}$}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Toks %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\meno={Martin Števko}
+\skola={MFF UK, Informatika, 1. ročník}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Zoznam prikazov %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\obr{pocet obtekanych riadkov}{l/r}{sirka}{cesta\nazov}
+
+ ~                              nedelitelna medzera
+ \                              medzera v matickom texte
+ \\                             prechod na novy riadok
+ \uv{}                          uvodzovky
+ \textit{}                      sikmy text
+ \textbf{}                      tucny text
+ \underline{}                   podciarknuty text
+ \overline{}                    nadciarknuty text
+ ^                              horny index
+ _                              dolny index
+ \sqrt[n]{k}                    n-ta odmocnina z k
+ \dfrac{citatel}{menovatel}     zlomok
+ \begin{align}
+     ...&=...\\
+ \end{align}                    sustavy rovnic so symbolom & pred                                           rovna sa zarovna
+ \nonumber                      pre necislovane align
+ \begin{align*}
+     ...&=...\\
+ \end{align*}                   riadky necisluje
+ \rightarrow                    sipka vpravo
+ \leftarrow                     sipka vlavo
+ \leftrightarrow                obojsmerna sipka (ekvivalencia)
+ \in                            mnozinovy znak "patri"
+ \colon                         dvojbodka
+ \dbinom{hore}{dole}            binomicke cislo (kombinacne)
+ \cos, \sin, \tan               goniometricke funkcie
+ \alpha, \beta,...              grecka abeceda
+ \pm                            znamienko plus-minus
+ \log                           logaritmus
+ \displaystyle\sum_{}^{}        suma
+ \displaystyle\prof_{}^{}       sucin
+ \displaystyle\lim_{x\to0}      limita do 0
+ \infty                         nekonecno
+ \begin{itemize}
+	\item 
+ \end{itemize}                  odrazky
+ \begin{tabular}{|c|c|p{2cm}|c|}
+    \hline
+     & $A$ & $B$ \\
+    \hline
+    $1.$ & $0$ - $9$ & $0$ - $9$\\
+    \hline
+ \end{tabular}                  tabulka, & oddeluje stlpce, \\riadky,                                       \hline kresli ciari, (l,c,r) zarovnava,                                     p{2cm} robi medzeru medzi stlpcami
+\python                         import python kodu
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Input obrazku %%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\begin{flushleft/center/flushright}
+\includegraphics[scale=1]{cesta\nazov}
+%\includegraphics[scale=1]{cesta\nazov}
+%\includegraphics[scale=1]{cesta\nazov}    %%% (viac do riadku)
+%\caption{popisok pod}
+\end{flushleft/center/flushright}
+\end{figure}                                vlozenie obrazku
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{gull}
+        \caption{A gull}
+        \label{fig:gull}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{tiger}
+        \caption{A tiger}
+        \label{fig:tiger}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{mouse}
+        \caption{A mouse}
+        \label{fig:mouse}
+    \end{subfigure}
+    \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+
+\begin{wrapfigure}[pocet obtekanych riadkov]{l/r}{0.52\textwidth}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{cesta\nazov}
+\end{center}
+%\caption{popisok pod}
+\end{wrapfigure}                            s obtekanim textu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Pocitadla %%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}                nastavenie predvoleneho pocitadla stran
+\newcount\pocet                     definovanie pocitadla pocet
+\pocet = 1                          priradenie hodnoty pocitadlu
+\the\pocet                          pouzitie pocitadla pocet
+\global\advance\pocet by 1          zvysenie pocitadla o 1
+\addtocounter{pocet}{cislo}         do pocet prida cislo
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
