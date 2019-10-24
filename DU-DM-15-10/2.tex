@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item $R\circ S$
+
+    Zoberme si $X=\{1,2,3\}$, pričom $R=\{(1,1), (2,2), (3,3), 
+    (1,3), (3,1)\}$ a $S=\{(1,1), (2,2), (3,3),\allowbreak (2,3), (3,2)\}$. 
+    Obe tieto relácie sú ekvivalencie, pretože sú reflexívne, 
+    symetrické a ku tranzitivite na nich nedochádza, takže aj 
+    tranzitívne. Pre ich zloženie však platí $1(R\circ S)2$, pretože 
+    $1R3$ a $3S2$ a neplatí $2(R\circ S)1$, pretože 2 je v $R$ 
+    relácii iba s 2 a 2 je v $S$ relácii iba s 2 a 3, nie 1. Potom 
+    relácia $(R\circ S)$ nie je symetrická a teda viem povedať, že 
+    pre ňu nemusí platiť, že je ekvivalenciou. (Neplatí to napríklad 
+    v prípade popísanom vyššie.)
+    \item $R\cap S$
+
+    To, že relácia je ekvivalencia dokážem ak ukážem, že je 
+    reflexívna (využitím reflexivity $R$ a $S$)
+    \[\forall x\in X: (x,x)\in R\wedge (x,x)\in S\Rightarrow 
+    (x,x)\in (R\cap S)\]
+    symetrická (využitím symetri $R$ a $S$)
+    \begin{align*}
+        x(R\cap S)y&\Leftrightarrow (x,y)\in (R\cap S)\\
+        &\Leftrightarrow (x,y)\in R\wedge (x,y)\in S\\
+        &\Leftrightarrow (y,x)\in R\wedge (y,x)\in S\\
+        &\Leftrightarrow (y,x)\in (R\cap S)\\
+        &\Leftrightarrow y(R\cap S)x
+    \end{align*}
+    aj tranzitívna (využitím tranzitivity $R$ a $S$)
+    \begin{align*}
+        x(R\cap S)y\wedge y(R\cap S)z&\Leftrightarrow 
+        (x,y)\in (R\cap S)\wedge (y,z)\in (R\cap S)\\
+        &\Leftrightarrow (x,y)\in R\wedge (x,y)\in S\wedge
+        (y,z)\in R\wedge (y,z)\in S\\
+        &\Rightarrow (x,z)\in R\wedge (x,z)\in S\\
+        &\Leftrightarrow (x,z)\in (R\cap S)\\
+        &\Leftrightarrow x(R\cap S)z
+    \end{align*}
+    Keďže $(R\cap S)$ je reflexívna, symetrická aj tranzitívna, je 
+    to aj ekvivalencia.
+    \item $R\cup S$
+
+    Zoberme si $X=\{1,2,3\}$, pričom $R=\{(1,1), (2,2), (3,3), 
+    (1,2), (2,1)\}$ a $S=\{(1,1), (2,2), (3,3),\allowbreak (2,3), (3,2)\}$. 
+    Obe relácie sú zjavne reflexívne aj symetrické a ku tranzitivite 
+    na nich nedochádza, takže aj tranzitívne. V relácii $(R\cup S)$ 
+    ale ku tranzitivite už dochádza a neplatí tam, pretože 
+    $(1,2), (2,3)\in (R\cup S)$ a zároveň $(1,3)\notin (R\cup S)$.
+    Relácia $(R\cup S)$ teda nemusí byť ekvivalencia.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

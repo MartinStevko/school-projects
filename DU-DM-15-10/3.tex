@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Dokážem, že $R\circ R\Rightarrow R$ a naopak. Z toho potom nutne 
+vyplýva ekvivalencia, teda aj rovnosť.
+
+Podľa definície zloženia relácií platí
+\[\forall x,z: x(R\circ R)z\Leftrightarrow\forall x,z \exists y\in X: 
+xRy\wedge yRz\]
+potom ale z tranzitivity
+\[\forall x,z\exists y\in X: xRy\wedge yRz\Rightarrow \forall x,z xRz\]
+
+Pre opačný smer zo symetrie a tranzitivity platí, že ak
+\[xRz\wedge\exists y\in X, x\neq y: xRy\Rightarrow yRz\Leftrightarrow 
+x(R\circ R)z\]
+Ak také $y$ neexistuje pre nejakú dvojicu $x, z$, potom nutne je táto 
+dvojica v relácii iba v rámci seba, teda so žiadným iným prvkom (kvôli 
+symetrii a tranzitivite). Z toho ale vyplýva, že pre všetky takéto 
+$x, z$ môžem zobrať $y=x$ a potom platí 
+\[xRx\wedge xRz\Rightarrow x(R\circ R)z\]
+
+Keďže platí obojstranná implikácia (pre všetky prípady), platí aj 
+ekvivalencia, teda $R\circ R=R$, čo som mal dokázať.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
