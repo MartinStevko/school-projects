@@ -4,11 +4,44 @@ import random
 n = int(input('n = '))
 m = []
 z = []
-temp = [(x for x in range(n))]
+temp = []
+odmietnutia = []
+for i in range(n):
+    temp.append(i)
+    odmietnutia.append(True)
 navrhy = {}
 for i in range(n):
     navrhy[i] = []
-    m.append(random.shuffle(temp))
-    z.append(random.shuffle(temp))
+    random.shuffle(temp)
+    m.append(temp[:])
+    random.shuffle(temp)
+    z.append(temp[:])
 
 # Algoritmus stabilneho parovania
+while True in odmietnutia:
+    for i in range(n):
+        if odmietnutia[i]:
+            navrhy[m[i][0]].append(i)
+            del m[i][0]
+            odmietnutia[i] = False
+
+    for key in navrhy:
+        mi = None
+        for i in navrhy[key]:
+            if mi is None:
+                mi = i
+                continue
+            if (z[key].index(mi) > z[key].index(i)):
+                odmietnutia[mi] = True
+                mi = i
+            else:
+                odmietnutia[i] = True
+        if mi:
+            navrhy[key] = [mi]
+
+print('(M, Z) = ', end='')
+for k in navrhy:
+    if k != n-1:
+        print(f'({navrhy[k][0]}, {k})', end=', ')
+    else:
+        print(f'({navrhy[k][0]}, {k})')
