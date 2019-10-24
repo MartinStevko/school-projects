@@ -1,5 +1,69 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Najprv dokážem pomocné tvrdenie. Majme $3^k$ gulí, pričom $3^k=2n+1$, 
+ktoré máme rozdelené na 2 skupiny početné $n+1$ (označme $P$) a $n$ 
+(označme $Q$), pričom vieme, že gule skupiny $P$ sú buď všetky pravé, 
+alebo 1 z nich je ľahšia a gule skupiny $Q$ sú buď všetky pravé, alebo 
+je 1 z nich ťažšia. Potom nepravú guľu vieme nájsť na $k$ vážení. 
+Rovnaké tvrdenie budeme uvažovať aj pre opčný smer, teda že ľahšia je 
+v $P$, alebo ťažšia v $Q$, ale dokážem len tento smer a druhý sa ukáže 
+analogicky. Nech teda $g_1, g_2,\dots, g_{n+1}\in P$ a 
+$g_{n+2}, g_{n+3},\dots, g_{2n+1}\in Q$.
 
+Dokážem indukciou. Pre $k=1$ máme 3 gule. Porovnám gule $g_1$ a $g_2$. 
+Ak sú rovnaké, guľa $g_3$ je ťažšia. Ak nie sú rovnaké viem, že medzi 
+nimi môže byť len ľahšia guľa a teda guľa na tej strane, ktorá je 
+vyššie je ľahšia. 
+
+Nech teda tvrdenie vyššie platí pre $k$ a dokážeme indukčný krok pre 
+$k+1$. Podľa $n$ značenia máme v predpoklade $2n+1$ gulí a v indukčnom 
+kroku $6n+3$ gulí. Bez ujmy na všeobecnosti si teda z tvrdenia vieme 
+povedať, že gule $g_1, g_2,\dots, g_{3n+2}\in P$ a gule 
+$g_{3n+3}, g_{3n+4},\dots, g_{6n+3}\in Q$. Rozdeľme si tieto gule na 
+3 skupiny. 
+\begin{itemize}
+    \item $g_1, g_2,\dots, g_{n+1}, 
+    g_{3n+3}, g_{3n+4},\dots, g_{4n+2}$
+    \item $g_{n+2}, g_{n+3},\dots, g_{2n+2}, 
+    g_{4n+3}, g_{4n+3},\dots, g_{5n+2}$
+    \item $g_{2n+3}, g_{2n+4},\dots, g_{3n+2}, 
+    g_{5n+3}, g_{5n+4},\dots, g_{6n+3}$
+\end{itemize}
+Teraz sú všetky skupiny rovnako, konkrétne $2n+1$ početné. Porovnajme 
+prvé 2 skupiny. Ak sú rovnaké, môžu obsahovať len pravé gule a potom 
+v tretej skupine musí byť nepravá. V nej nám ale ostali gule zadelené 
+do $P$ a $Q$ podľa podmienok tvrdenia, takže môžeme využiť indukčný 
+predpoklad. Ak je jedna strana ťažšia viem, že buď je na ťažšej strane 
+ťažšia guľa, alebo na ľahšej ľahšia. Potom ale viem vybrať gule z $P$ 
+z ľahšej strany a gule z $Q$ z tej ťažšej a povedať, že nepravá guľa 
+je medzi vybranými. Na tieto vybrané potom môžem aplikovať indukčný 
+predpoklad, keďže spĺňajú podmienky zadelenia v tvrdení. Avšak v oboch 
+prípadoch som 1 váženie spotreboval a ostalo mi ich $k$, pričom na 
+indukčný predpoklad potrebujem práve $k$ vážení. Z toho ale vyplýva, že
+každých $3^k$ gulí teda odvážim na $k$ vážení, čo som chcel dokázať.
+
+Pozrime sa teraz na samotnú úlohu. Máme teda $n=\frac{3^k-1}{2}$ gulí 
+a chceme dokázať, že ich dokážeme odvážiť na $k$ vážení. Znova 
+indukciou pre $k=1$ máme 1 guľu, tú odvážime so správnou a vieme 
+aká je. Predpokladajme teda, že tvrdenie platí pre $k$ a dokážme ho 
+pre $k+1$. Z našich $\frac{3^{k+1}-1}{2}$ si teraz odčlenme 
+$\frac{3^k-1}{2}$ gulí, pretože podľa indukčného predpokladu vieme, 
+že ak si budeme istí, že nepravá guľa je medzi nimi, ktorá to je 
+dokážeme zistiť na $k$ vážení. Ostalo nám teda 
+\[\dfrac{3^{k+1}-1}{2}-\dfrac{3^k-1}{2}=3^k\]
+gulí. Všimnime si teraz ale, že ak výstup z ich váženia (pričom pri 
+vážení ich rozdelíme na polovicu a k menšej časti pridáme správnu 
+guľu, ktorú po vážení odoberieme) použijeme ako vstup pre vyššie 
+dokázaný pomocný argument, tak to, ktorá z nich je nepravá zistíme 
+na $k$ vážení. 1 ďalšie sme potrebovali na ich zadelenie a teda 
+z $\frac{3^{k+1}-1}{2}$ gulí vieme identifikovať nepravú na $k+1$ 
+vážení. Podľa dôkazu z cvičenia je to zároveň maximum, takže toto 
+nemusíme ďalej dokazovať. 
+
+V dôkaze je zároveň popísaný algoritmus váženia, ku ktorému môžeme 
+pristupovať rekurzívne, až kým neidentifikujeme nesprávnu guľu. 
+V prípade, že gulí nemáme maximálny možný počet na $k$ vážení, ale 
+menší, ako z algoritmu vyplýva, dôležité je len ich rozdelenie, 
+početnosti môžu byť aj menšie.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

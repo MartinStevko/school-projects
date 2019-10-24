@@ -1,5 +1,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{itemize}
+    \item Koľko správnych gulí nám stačí?
 
+    V algoritme popísanom v úlohe 3 sme použili iba 1 správnu guľu 
+    (možno viackrát), je teda zrejmé, že viac ich nepotrebujeme.
+
+    \item Koľko vážení potrebujeme ak správne gule nemáme?
+
+    Pre 1 a 2 gule sa to zjavne bez správnej zistiť nedá, takže 
+    predpokladajme, že máme aspoň 3 gule. Tvrdím, že bez správnej gule 
+    dokážeme nesprávnu identifikovať na $k$ vážení, pričom máme najviac 
+    $\frac{3^k-3}{2}$ gulí (čiže o 1 menej než v úlohe 3). Znova budeme 
+    postupovať indukciou. Nech $k=2$ (pre $1$ je to nemožné). Máme 
+    teda $3$ gule. Porovnáme 2 z nich, ak sú rovnaké, nesprávna je 
+    tretia a môžem využiť algoritmus z úlohy 3 pre 1 guľu, pričom ako 
+    správnu použijem jednu z porovnávanej dvojice (keďže tie sú 
+    rovnaké a obe nesprávne byť nemôžu), čo je na 1 váženie, teda 
+    dokopy som použil 2 váženia. Ak sú rôzne, nesprávna je jedna 
+    z nich, takže ako správnu môžem použiť tretiu, odvážiť ju s druhou 
+    a ak sú rovnaké, z prvého váženia viem povedať aká nesprávna je 
+    prvá, ak sú rôzne, tak z tohto. Počiatočný prípad pre indukciu teda 
+    máme dokázaný. 
+
+    Predpokladajme teraz, že tvrdenie platí pre $k$ a dokážme ho 
+    pre $k+1$. Máme teda $\frac{3^{k+1}-3}{2}=\frac{3\cdot (3^k-1)}{2}$ 
+    gulí. Rozdeľme ich na 3 kôpky po $\frac{3^k-1}{2}$. Dve z nich 
+    porovnáme. Ak sú rovnaké, zoberieme tretiu a použijeme algoritmus 
+    z úlohy 3, pričom správnu gulu budú tie z porovnávania. Ak sú 
+    rôzne, ich počet je $3^k-1$ a sú rozdelené na 2 rovnako početné 
+    skupiny. Pridajme k nim teda 1, ktorú sme neporovnávali a vieme 
+    použiť pomocné tvrdenie z úlohy 3. Týmto sme teda dokázali, že na 
+    $k+1$ vážení to pôjde a tým sme dokázali aj celé tvrdenie. 
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
