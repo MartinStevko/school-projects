@@ -1,3 +1,5 @@
+# Marin Stevko
+
 # Vytvorenie dat
 import random
 

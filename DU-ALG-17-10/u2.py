@@ -1,3 +1,6 @@
+# Martin Stevko
+
+
 def sucin(x, y):
     v = [0]*(len(x)+len(y))
     x += [0]
