@@ -1,0 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Pozrime sa na to, čo znamená ľavá strana. Najprv vyberiem $m$--prvkové 
+podmnožiny z $n$--prvkovej množiny a ich počet vynásobím počtom 
+$r$--prvkových podmnožín, ktoré pre každú z nich existujú. Dostanem 
+teda číslo, ktoré znamená počet $r$--prvkových podmnožín z $n$--prvkovej 
+množiny, pričom každá táto podmnožina tam bude zarátaná $x$--krát (lebo 
+tú istu podmnožinu dostanem z viacerých $m$--prvkových podmnožín). Každá 
+z nich tam je ale zarátaná $\binom{n-r}{m-r}$--krát pretože je to to 
+isté, ako by som si $r$ prvkov vybral dopredu a potom zo zvyšných $n-r$ 
+vyberal zvyšných $m-r$ prvkov. Dostávam teda 
+\[\binom{n}{m} \cdot \binom{m}{r} = 
+\binom{n}{r} \cdot \binom{n-r}{m-r} \] 
+čo som mal dokázať.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Viem povedať, že každé 2 usporiadané dvojice sú buď neporovnateľné, 
+alebo sú menšie ako dvojica s väčším súčtom, respektíve väčšie ako 
+dvojica s menším súčtom. Platí to preto, lebo ak mám napríklad $(a,b)$ 
+a $(c,d)$, tak ak $(a,b)\neq (c,d)$ a $a+b\geq c+d$, tak ak $a\geq c$, 
+potom buď $b\geq d$ (vačšie), alebo $b\leq d$ (neporovnateľné) a ak 
+$a\leq c$, potom nutne $b>d$ (neporovnateľné). Zároveň viem, že všetky 
+dvojice s rovnakým súčtom budú neporovnateľné, lebo ak $a+b=c+d$ a 
+$a\geq c$, potom nutne $b\leq d$, pričom aby platilo $(a,b)\neq (c,d)$, 
+tak v oboch nerovnostiach rovnosť súčastne nastať nemôže. Potom 
+najdlhší reťazec môže byť len taký, ktorý každý súčet obsahuje práve 
+raz. Takýchto reťazcov existuje hneď niekoľko, spĺňa to napríklad 
+reťazec s dĺžkou $199$, ktorý vyzerá ako
+$$(1,1)\preceq (2,1)\preceq\dots\preceq (100,1)
+\preceq (100,2)\preceq (100,3)\preceq\dots\preceq (100,100)$$
+
+Ďalej tvrdím, že antireťazec môže mať dĺžku najviac 100, pretože 
+najviac navzájom neporovnateľných prvkov má množina usporiadaných 
+dvojíc so súčtom 101 a jej mohutnosť je 100 (pretože prvý prvok si 
+vyberiem z 1 až 100 a druhý mám jednoznačne určený). Dlhší antireťazec 
+neexistuje, pretože akonáhle vyberiem prvok s iným súčtom, viem ho 
+porovnať s aspoň 2 prvkami so súčtom 101, ktoré ak sa v antireťazci 
+nenachádzajú viem s týmto prvkom vymeniť a zväčšiť jeho dĺžku, alebo 
+ak sa tam nachádzajú, tak to nie je antireťazec. Antireťazec s dĺžkou 
+100 je napríklad 
+$$(1,100),\ (2,99),\ (3,98),\dots,\ (100,1)$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
