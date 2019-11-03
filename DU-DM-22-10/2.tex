@@ -15,16 +15,14 @@ reťazec s dĺžkou $199$, ktorý vyzerá ako
 $$(1,1)\preceq (2,1)\preceq\dots\preceq (100,1)
 \preceq (100,2)\preceq (100,3)\preceq\dots\preceq (100,100)$$
 
-Ďalej tvrdím, že antireťazec môže mať dĺžku najviac 100, pretože 
-najviac navzájom neporovnateľných prvkov má množina usporiadaných 
-dvojíc so súčtom 101 a jej mohutnosť je 100 (pretože prvý prvok si 
-vyberiem z 1 až 100 a druhý mám jednoznačne určený). Dlhší antireťazec 
-neexistuje, pretože akonáhle vyberiem prvok s iným súčtom, viem ho 
-porovnať s aspoň 2 prvkami so súčtom 101, ktoré ak sa v antireťazci 
-nenachádzajú viem s týmto prvkom vymeniť a zväčšiť jeho dĺžku, alebo 
-ak sa tam nachádzajú, tak to nie je antireťazec. Antireťazec s dĺžkou 
-100 je napríklad 
+Ďalej tvrdím, že antireťazec môže mať dĺžku najviac 100. Pozrime sa 
+teraz na reťazce, ktoré začínajú v $(1,x)$ a končia v $(100,x)$ pre 
+všetky $x$ od 1 do 100. Týchto reťazcov je 100, sú navzájom disjunktné 
+a zároveň pokrývajú celú množinu zo zadania (lebo každý prvok je 
+aspoň v nejakom reťazci). Z toho zjavne vyplýva, že si neviem vybrať 
+antireťazec dlhší než je počet týchto reťazcov, lebo ináč by som 
+vybral 2 prvky z jedného reťazca, čím by boli porovnateľné. 
+Antireťazec s dĺžkou 100 skutočne existuje a je to napríklad 
 $$(1,100),\ (2,99),\ (3,98),\dots,\ (100,1)$$
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
