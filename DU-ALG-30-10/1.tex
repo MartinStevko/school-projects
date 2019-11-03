@@ -1,5 +1,45 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Bez ujmy na všeobecnosti predpokladajme, že byty sú očíslované v smere 
+hodinových ručičiek. Pre každú rodinu si poďme vyrátať ich vzdialenosť 
+v smere hodinových ručičiek od miesta, kam sa chcú presťahovať (alebo 
+o koľko bytov ich musíme posunúť). Na začiatku nech to je $1$ pre všetky 
+rodiny, teda spolu $n$. Pozrime sa ale na to, že táto vzdialenosť sa 
+nezmení ani ak vymením nejakú dvojicu, pretože 1 rodine sa vzdialenosť 
+o 1 zníži a tej druhej zas o 1 zvýši. 
 
+Premyslime si ale ešte ako to bude vyzerať v okolí miesta, kde nejaká 
+rodina chce bývať, pretože uvažujeme vzdialenosti v jednom smere, takže 
+tu sa budú výrazne meniť. Ak sa presťahujú do cieleného bytu, pričom 
+sa sťahovali v smere hodinových ručičiek, tak ich vzdialenosť sa zníži 
+o 1 a vzdialenosť druhej sťahovanej rodini sa o 1 zvýši, alebo nastane 
+prípad, kedy sa aj táto druhá rodina presťahovala do bytu kde chce 
+bývať, no tentokrát sa sťahovali v protismere hodinových ručičiek, čiže 
+zo vzdialenosti $n-1$ sa stala vzdialenosť $0$. Potom súčet 
+vzdialeností sa buď zachoval, alebo ak nastal prípad, kedy sa obe 
+rodiny presťahovali tam, kde chcú bývať, tak sa súčet znížil o $n$. 
+Ostáva sa ešte zamyslieť nad prípadom kedy sa rodina do cieleného bytu 
+presťahuje v protismere hodinových ručičiek a druhá sťahovaná rodina sa 
+do cieleného bytu nepresťahuje, no to je analogické ako prípad vyššie 
+a súčet sa pri tom nezmení a nad prípadom, kedy sa rodina z cieleného 
+bytu presťahuje v smere hodinových ručičiek o 1 ďalej, avšak vtedy 
+nastáva prípad symetrický tomu popísanému vyššie a teda súčet sa o $n$ 
+zvýši.
+
+Na začiatku teda máme vzdialenosť $1$ pre každú rodinu a potrebujeme 
+z nej spraviť nejaký násobok $n$, pretože až vtedy budú všetky rodiny 
+v bytoch kde chcú. Potom sa ale každá rodina musí presťahovať aspoň raz 
+v smere hodinových ručičiek, alebo aspoň $n-1$ krát v protismere 
+hodinových ručičiek. Zároveň viem, že prípad, kedy sa každá rodina 
+presťahuje iba aspoň raz v smere hodinových ručičiek nastať nemôže, 
+lebo to by sme celkový súčet znížili na $0$ bez toho, aby sa nejaká 
+rodina presťahovala do svojho bytu v protismere hodinových ručičiek, 
+o čom sme dokázali, že sa to nedá. Musí teda nastať prípad, kedy sa 
+nejaká rodina sťahuje aspoň $(n-1)$--krát, čo znamená, že za menej ako 
+$n-1$ dní sa sťahovanie uskutočniť nedá. To že za $n-1$ dní sa to dá 
+dokážem nájdením konkrétnej konštrukcie, napríklad tej, že zoberiem 
+rodinu $n$ a prvý deň ju vymením s rodinou $n-1$, druhý deň s $n-2$, 
+až $(n-1)$. deň s rodinou $n-(n-1)=1$. Potom budú všetky rodiny 
+v bytoch kde byť chcú.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

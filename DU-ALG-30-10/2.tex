@@ -1,5 +1,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Maximálny počet banánov, ktoré vieme dopraviť do kilometra $d$ oznažme 
+$v_d$. Tvrdím, že do kilometra $d+1$ vieme dopraviť najviac 
+$$v_{d+1} = v_d - (2\cdot\lceil\dfrac{v_d-2S}{N}\rceil -1)\cdot S$$
+banánov. Tvrdenie platí, pretože nech mám prenesených koľkokoľvek 
+banánov, vždy ak na kôpke o kilometer dozadu ostalo aspoň $2S+1$ 
+banánov, tak sa mi po ne oplatí vrátiť, pretože po ceste tam a späť zje 
+velblúd iba $2S$ banánov. Potom viem vzťah upraviť všeobecne na:
+$$v_d = V-\sum_{i = 0}^{d-1}(2\cdot\lceil\dfrac{v_d-2S}{N}\rceil -1)\cdot S$$
+V úlohe v bode 2 mi teda stačí nájsť $v_D$ a mám riešenie, respektíve 
+$v=v_D$.
 
+V bode 1 mám zadané $v$ a potrebujem zistiť $D$. Vieme teda, že 
+$$\dfrac{V-v}{S} = \sum_{i = 0}^{D-1}(2\cdot\lceil\dfrac{v_D-2S}{N}\rceil -1)$$
+z čoho sa $D$ dá zistiť postupným pričítavaním ďalšieho prvku na pravú 
+stranu, až kým nedostanem rovnosť. Potom som našiel hľadané $D$. Pre 
+výpočet človekom je rovnica vyššie pomerne komplikovaná a dá sa 
+zjednodušiť napríklad tak, že si všimneme, že prvky sumy sa niekoľkokrát 
+za sebou opakujú (majú rovnakú hodnotu), takže by nám stačilo pozerať sa 
+na hodnoty keď sa to zmení. Konkrétne by to pre bod 1 vyzeralo tak, že 
+vyrátame $n$ -- v mojom riešení poslednú pozíciu zmeny ako 
+$$n=\lceil\frac{V}{N}\rceil -\lceil\frac{v}{N}\rceil$$
+a následne zrátam dĺžku celého úseku $d_n$ bez zmeny plus k nemu 
+pripočítam sumu dĺžok predošlých úsekov, teda rovnica by vyzerala ako 
+(aj s ošetrením všetkých podmienok aby sme nešli do záporu):
+\[D = d_n = \frac{\min\{N, \max [(\lceil\frac{V}{N}\rceil -n+1)\cdot N, 
+0]\}}{(2\cdot\frac{\max [(\lceil\frac{V}{N}\rceil -n+1)\cdot N, 
+0]}{N}-1)\cdot S}+\sum_{i = 1}^{n-1}  d_i\]
+
+Pre konkrétne hodnoty v zadaní teda $533$ kilometrov. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

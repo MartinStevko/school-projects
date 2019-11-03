@@ -1,5 +1,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Generál na začiatku prejde do stavu \textit{nový generál}, čím 
+vedľajšiemu vojakovi povie, že mu posiela signál $1$ a signál $2$. 
+Signál $1$ sa bude šíriť rýchlosťou $1$ (teda vždy keď vojak vedľa seba 
+uvidí niekoho v stave $1$, prejde v ďalšom takte do stavu $1$ aj on a 
+zároveň vojak, ktorý v tomto stave bol celý takt prejde do neutrálneho 
+stavu). Signál $2$ sa bude šíriť rýchlosťou $1/3$, takže ak vojak vedľa seba vidí niekoho 
+v stave $2$ prejde do stavu $2.2$, ďalší takt do stavu $2.1$ a nakoniec 
+do stavu $2$. Po tomto stave prejde znova do neutrálneho stavu. Ak sa 
+nejaký vojak má dostať naraz do stavu 1 aj nejakého dvojkového stavu, 
+prejde do stavu \textit{nový generál}, signály, ktoré zachytil už 
+ďalej nepošle, ale obaja jeho susedia zaregistrujú nové signály 
+spôsobené týmto stavom, ktoré sa budú šíriť ďalej. Po stave 
+\textit{nový generál} prejde do stavu \textit{nový zadák}, aby signály 
+naďalej už len odrážal. Zadák aj nový zadák v stave $1$ zotrvá o takt 
+dlhšie ako vojak, aby signál poslal späť.
 
+Vieme, že signály $1$ a $2$ sa stretnú zakaždým v polovici, pretože 
+zatiaľ čo pomalší prejde $x$ vojakov, rýchlejší prejde $3x$ vojakov. 
+Takto sa teda postupne hľadajú polovice a v momente, keď sa všetci 
+dostanú do stavu aspoň raz do stavu nový generál sa môže ozvať salva, 
+pretože každý (až n agenerála a zadáka) vedľa seba bude mať 2 vojakov, 
+ktorý do tohto stavu prešli len teraz. Ak teda uvidia vedľa seba $2$ 
+nových generálov, môžu strieľať. 
+
+Aby riešenie bolo prakticky použiteľné, bolo by potrebné doriešiť ešte 
+detaily ako to, že čo sa bude diať ak počet vojakov nie je $2^n-1$, ale 
+to sa dá vyriešiť viacerými stavmi a vzhľadom na vetu v zadaní "Nejde 
+o přesný popis automatu, ale o myšlenku jejich komunikace" to v tomto 
+riešení nepovažujem za dôležité. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
