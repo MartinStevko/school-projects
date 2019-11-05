@@ -1,5 +1,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+V riešení budem hovoriť o "množinách". Vždy budem mať na mysli množiny 
+$A$ a $B$, do ktorých musím vedieť rozdeliť vrcholy grafu tak, aby 
+žiadna množina neobsahovala 2 vrcholy spojené hranou (z definície).
 
+Pozrime za  najprv na graf $G$. Ak nastane situácia, že v tomto grafe 
+budú existovať 3 vzájomne nespojené body, v grafe $\overline{G}$ už 
+spojené budú, avšak potom nemôže byť bipartitný, lebo z Dirichletovho 
+princípu bude vždy existovať množina, v ktorej budú aspoň 2 takéto 
+vrcholy, no tie budú navzájom spojené hranou, čo je spor s definíciou 
+bipartitného grafu.
+
+Na to aby bola možnosť, že také 3 body neexistujú, môže mať graf 
+najviac 4 vrcholy, lebo inak by znova z dirichletovho princípu aspoň 
+v jednej z množín boli aspoň 3 vrcholy (a tie by nesmeli byť spojené). 
+Číslo $n$ sa teda môže rovnať iba 1, 2, 3 a 4 (prípadne aj 0 ak ju 
+berieme ako prirodzené číslo). To že skutočne môže dokážem nájdením 
+konkrétneho príkladu grafu. 
+
+Pre $n=1$ (prípadne 0) je riešenie triviálne, máme len vrchol (prípadne 
+nič).
+
+Pre $n=2$ majme graf $G(\{1,2\}, \{(1,2)\})$, potom 
+$\overline{G}(\{1,2\}, \varnothing)$, čiže ak v oboch grafoch $1\in A$ 
+a $2\in B$, grafy sú bipartitné.
+
+Pre $n=3$ majme graf $G(\{1,2,3\}, \{(1,2), (1,3)\})$, potom 
+$\overline{G}(\{1,2,3\}, \{(2,3)\})$, čiže ak v prvom grafe $1\in A$ 
+a $2,3\in B$ a v druhom grafe $1,2\in A$ a $3\in B$, grafy sú 
+bipartitné.
+
+Pre $n=4$ majme graf $G(\{1,2,3,4\}, \{(1,2), (1,3), (3,4)\})$, potom 
+$\overline{G}(\{1,2,3,4\}, \{(1,4), (2,3), (2,4)\})$, čiže ak v prvom 
+grafe $1,4\in A$ a $2,3\in B$ a v druhom grafe $1,2\in A$ a $3,4\in B$, 
+grafy sú bipartitné.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
