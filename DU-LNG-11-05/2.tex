@@ -1,5 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Na to aby som dokázal, že ide o podgrupu potrebujem dokázať 3 veci:
+\begin{itemize}
+    \item $\forall a,b\in H: a\circ b\in H$
+    \item $\forall a\in H: a^{-1}\in H$
+    \item $e\in H$
+\end{itemize}
+Podmienku o asociativite dokazovať nemusíme, keďže tá vyplýva priamo 
+z faktu, že ide o podmnožinu a rovnakú operáciu než v grupe, kde táto 
+podmienka platí.
 
+Keďže $H_1$ a $H_2$ sú podgrupy, platí 
+$$e\in H_1\wedge e\in H_2\Rightarrow e\in H_1\cap H_2$$
+takisto platí
+$$\forall a\in H_1: a^{-1}\in H_1\wedge\forall a\in H_2: a^{-1}\in H_2
+\Rightarrow\forall a\in H_1\cap H_2: a^{-1}\in H_1\cap H_2$$
+a tiež
+$$\forall a,b\in H_1: a\circ b\in H_1\wedge
+\forall a,b\in H_2: a\circ b\in H_2
+\Rightarrow\forall a,b\in H_1\cap H_2: a\circ b\in H_1\cap H_2$$
+pretože
+$$x\in H_1\wedge x\in H_2\Leftrightarrow x\in H_1\cap H_2$$
+
+Tým som ale dokázal všetky 3 podmienky. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,5 +1,85 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Začnem s výpočtom inverznej matice v $\z_3$.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    2 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+    2 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+    1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+   \end{pmatrix}\]
+Pričítam 1. riadok k 2. a 3. raz a ku 4. dvakrát.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 2 & 2 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
+    0 & 2 & 0 & 2 & 2 & 0 & 0 & 1 \\
+   \end{pmatrix}\]
+3. riadok dám na 2. miesto, 2. na 4. miesto a ku pôvodnému 4. 
+pripočítam pôvodný 3. a dám ho na 3. miesto.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+    0 & 0 & 2 & 2 & 1 & 1 & 0 & 0 \\
+   \end{pmatrix}\]
+4. riadok najprv pričítam k 1. a 2. a potom k nemu pričítam 3. riadok.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 0 & 0 & 2 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 2 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 2 & 1 & 1 & 1 & 1 \\
+   \end{pmatrix}\]
+4. riadok vynásobim dvomi.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 0 & 0 & 2 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 2 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 2 & 2 & 2 & 2 \\
+   \end{pmatrix}\]
+Na ľavej strane sme dostali jednotkovú maticu, takže tá na strane 
+pravej bude inverzná k matici v zadaní. Pre skúšku môžeme matice 
+v $\z_3$ vynásobiť a skutočne dostaneme jednotkovú, takže sú inverzné.
 
+\bigskip
+Teraz vypočítam inverznú maticu v $\z_5$.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    2 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+    2 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+    1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+   \end{pmatrix}\]
+1. riadok odpočítam od 2. a 3. dvakrát a od 4. raz.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 4 & 4 & 3 & 1 & 0 & 0 \\
+    0 & 1 & 3 & 3 & 3 & 0 & 1 & 0 \\
+    0 & 2 & 0 & 4 & 4 & 0 & 0 & 1 \\
+   \end{pmatrix}\]
+Najprv k 1. riadku pripočítam 2. a potom dám 3. riadok na 2. miesto, 
+2. na 4. miesto a 4. na 3. miesto.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 0 & 0 & 4 & 1 & 0 & 0 \\
+    0 & 1 & 3 & 3 & 3 & 0 & 1 & 0 \\
+    0 & 2 & 0 & 4 & 4 & 0 & 0 & 1 \\
+    0 & 0 & 4 & 4 & 3 & 1 & 0 & 0 \\
+   \end{pmatrix}\]
+Od 3. riadku dvakrát odpočítam 2. a 4. vynásobím štyroma.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 0 & 0 & 4 & 1 & 0 & 0 \\
+    0 & 1 & 3 & 3 & 3 & 0 & 1 & 0 \\
+    0 & 0 & 4 & 3 & 3 & 0 & 3 & 1 \\
+    0 & 0 & 1 & 1 & 2 & 4 & 0 & 0 \\
+   \end{pmatrix}\]
+K 2. a 3. riadku pripočítam dvojnásobok 4. riadku a následne od 4. 
+riadku odpočítam nový 3. riadok.
+\[\begin{pmatrix}[cccc|cccc]
+    1 & 0 & 0 & 0 & 4 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 2 & 3 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 2 & 3 & 3 & 1 \\
+    0 & 0 & 0 & 1 & 0 & 1 & 2 & 4 \\
+   \end{pmatrix}\]
+Na ľavej strane sme znova dostali jednotkovú maticu, takže tá na strane 
+pravej bude inverzná k matici v zadaní. Pre skúšku môžeme matice 
+v $\z_5$ vynásobiť a skutočne dostaneme jednotkovú, takže sú inverzné.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

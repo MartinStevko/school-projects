@@ -1,5 +1,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Nutnými postačujúcimi podmienkami sú z dafinície tieto 3:
+\begin{enumerate}
+    \item $\forall a,b\in H: a\circ b\in H$
+    \item $\forall a\in H: a^{-1}\in H$
+    \item $e\in H$
+\end{enumerate}
+(Podmienku o asociativite dokazovať nemusíme, keďže tá vyplýva priamo 
+z faktu, že ide o podmnožinu a rovnakú operáciu než v grupe, kde táto 
+podmienka platí.)
 
+Najprv dokážem implikáciu, kedy predpokladám, že ide o podgrupu. Viem 
+teda, že platí
+\[\forall a,b\in H: a,b^{-1}\in H\wedge a\circ b\in H
+\Rightarrow a\circ b^{-1}\in H\]
+čo som chcel dokázať.
+
+Pozrime sa teraz na opačnú implikáciu. Viem, že 
+\[\forall a,b\in H: a\circ b^{-1}\in H\]
+Na dokázanie 3. podmienky si zoberme $a=b$. Potom platí 
+\[ a\circ b^{-1}\in H\Leftrightarrow a\circ a^{-1}\in H
+\Leftrightarrow e\in H\]
+Na dokzanie 2. podmienky si zoberme $a=e$ ($e\in H$ už viem), potom
+\[\forall b\in H: e\circ b^{-1}\in H\Leftrightarrow b^{-1}\in H\]
+čo som chcel dokázať.
+Nakoniec si zvoľme ľubovoľné $x$ také, že $x\in H$. Potom nech 
+$b=x^{-1}$, pričom $b\in H$ podľa už dokázanej podmienky 2. 
+Z predpokladu teda viem
+\[\forall a\in H: a\circ b^{-1}\in H\]
+čo po dosadení bude 
+\[\forall a\in H: a\circ x\in H\]
+Naviac ale viem, že $x$ som si zvolil ľubovoľne z množiny $H$, takže 
+podmienka musí platiť pre všetky $x$, čiže viem povedať 
+\[\forall a,x\in H: a\circ x\in H\]
+čo už je ekvivalentné prvej podmienke. Tým sú všetky 3 dokázané, takže 
+skutočne ide o podgrupu grupy $G$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
