@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Dokument %%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+%\usepackage{a4wide}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{enumitem}
+
+\usepackage{graphicx}   % obrazky
+\usepackage{wrapfig}    % obrazky
+
+\usepackage{hyperref}   % url
+\usepackage{array}      % column width
+\usepackage[shellescape,latex]{gmp}     % metapost
+
+\usepackage{siunitx}    % stvorcek (QED)
+\setlength{\fboxsep}{.5\fboxsep}
+\pagenumbering{gobble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Hlavicka a riesenie %%%%%%%%%%%%%%%%%%%%%%%%%
+\newcount\uloha
+\newtoks\meno
+\newtoks\skola
+
+\parindent=0pt
+\parskip=5pt
+
+\def\hlavicka{%
+    \the\meno \par
+    \the\skola \par
+    \underline{Úloha \the\uloha.} \par
+}
+
+\def\riesenie{%
+\parindent=20pt
+\parskip=5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Maticke makra %%%%%%%%%%%%%%%%%%%%%%%%%
+\def\n{{\mathbb N}}
+\def\z{{\mathbb Z}}
+\def\q{{\mathbb Q}}
+\def\r{{\mathbb R}}
+
+\def\vu#1{|\sphericalangle #1|}
+\def\st{{}^\circ}
+\def\vektor#1{\overrightarrow{(#1)}}
+\def\obsah#1{{\mathrm S}_{#1}}
+
+\def\kong#1#2#3{$#1\equiv#2\pmod{#3}$}
+\def\deli{\mathop{|}}
+\def\nedeli{\mathop{\not|}}
+\def\dcc#1{\left\lfloor{#1}\right\rfloor}
+\def\hcc#1{\left\lceil{#1}\right\rceil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Ine makra %%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\wrapobr}[6]{%
+    \begin{wrapfigure}[#1]{#2}{#3\textwidth}
+        \vspace{#4pt}
+        \begin{center}
+            \includegraphics[width=#5\textwidth]{images/#6}
+        \end{center}
+    \end{wrapfigure}
+}
+
+\newcommand{\wrapmpost}[6]{%
+    \begin{wrapfigure}[#1]{#2}{#3\textwidth}
+        \vspace{#4pt}
+        \begin{center}
+            \resizebox{#5\textwidth}{!}{\input{images/#6}}
+        \end{center}
+    \end{wrapfigure}
+}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\leftflushing\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\rightflushing\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\def\stvorcek#1{%
+    \hspace{#1}\fbox{$\phantom{5}$}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Toks %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\meno={Martin Števko}
+\skola={MFF UK, Informatika, 1. ročník}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
