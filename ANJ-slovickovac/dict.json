@@ -1,0 +1,376 @@
+{
+    "acquaintance": {
+        "id": 0,
+        "sk": [
+            "známy"
+        ],
+        "en": [
+            "acquaintance"
+        ]
+    },
+    "unconsciously": {
+        "id": 1,
+        "sk": [
+            "nevedome"
+        ],
+        "en": [
+            "unconsciously"
+        ]
+    },
+    "stumble over": {
+        "id": 2,
+        "sk": [
+            "potknúť sa o",
+            "zakopnúť o"
+        ],
+        "en": [
+            "stumble over",
+            "stumble"
+        ]
+    },
+    "treat": {
+        "id": 3,
+        "sk": [
+            "zachádzať",
+            "správať sa"
+        ],
+        "en": [
+            "treat",
+            "treat as"
+        ]
+    },
+    "fragile": {
+        "id": 4,
+        "sk": [
+            "krehký"
+        ],
+        "en": [
+            "fragile"
+        ]
+    },
+    "boast": {
+        "id": 5,
+        "sk": [
+            "chvastať sa"
+        ],
+        "en": [
+            "boast"
+        ]
+    },
+    "gossip": {
+        "id": 6,
+        "sk": [
+            "klebety"
+        ],
+        "en": [
+            "gossip"
+        ]
+    },
+    "take after": {
+        "id": 7,
+        "sk": [
+            "podobať sa"
+        ],
+        "en": [
+            "take after"
+        ]
+    },
+    "show off": {
+        "id": 8,
+        "sk": [
+            "predvádzať sa"
+        ],
+        "en": [
+            "show off"
+        ]
+    },
+    "suffer from": {
+        "id": 9,
+        "sk": [
+            "znechutený z"
+        ],
+        "en": [
+            "suffer from",
+            "suffer"
+        ]
+    },
+    "fed up": {
+        "id": 10,
+        "sk": [
+            "mať dosť"
+        ],
+        "en": [
+            "fed up",
+            "be fed up"
+        ]
+    },
+    "spoil": {
+        "id": 11,
+        "sk": [
+            "kaziť",
+            "rozmaznávať"
+        ],
+        "en": [
+            "spoil"
+        ]
+    },
+    "take up": {
+        "id": 12,
+        "sk": [
+            "zaoberať sa"
+        ],
+        "en": [
+            "take up"
+        ]
+    },
+    "go from strength to strength": {
+        "id": 13,
+        "sk": [
+            "zlepšovať sa"
+        ],
+        "en": [
+            "go from strength to strength",
+            "went from strength to strength"
+        ]
+    },
+    "pick up": {
+        "id": 14,
+        "sk": [
+            "venovať pozornosť",
+            "vyzdvihnúť"
+        ],
+        "en": [
+            "pick up"
+        ]
+    },
+    "fraction": {
+        "id": 15,
+        "sk": [
+            "zlomok"
+        ],
+        "en": [
+            "fraction"
+        ]
+    },
+    "composite numbers": {
+        "id": 16,
+        "sk": [
+            "zložené čísla",
+            "zložené"
+        ],
+        "en": [
+            "composite numbers",
+            "composite"
+        ]
+    },
+    "addition": {
+        "id": 17,
+        "sk": [
+            "sčítanie"
+        ],
+        "en": [
+            "addition"
+        ]
+    },
+    "subtraction": {
+        "id": 18,
+        "sk": [
+            "odčítanie"
+        ],
+        "en": [
+            "subtraction"
+        ]
+    },
+    "multiplication": {
+        "id": 19,
+        "sk": [
+            "násobenie"
+        ],
+        "en": [
+            "multiplication"
+        ]
+    },
+    "division": {
+        "id": 20,
+        "sk": [
+            "delenie"
+        ],
+        "en": [
+            "division"
+        ]
+    },
+    "summand": {
+        "id": 21,
+        "sk": [
+            "sčítanec"
+        ],
+        "en": [
+            "summand"
+        ]
+    },
+    "minuend": {
+        "id": 22,
+        "sk": [
+            "menšenec"
+        ],
+        "en": [
+            "minuend"
+        ]
+    },
+    "subtrahend": {
+        "id": 23,
+        "sk": [
+            "menšiteľ"
+        ],
+        "en": [
+            "subtrahend"
+        ]
+    },
+    "product": {
+        "id": 24,
+        "sk": [
+            "súčin"
+        ],
+        "en": [
+            "product"
+        ]
+    },
+    "quotient": {
+        "id": 25,
+        "sk": [
+            "podiel"
+        ],
+        "en": [
+            "quotient"
+        ]
+    },
+    "factor": {
+        "id": 26,
+        "sk": [
+            "činiteľ"
+        ],
+        "en": [
+            "factor"
+        ]
+    },
+    "dividend": {
+        "id": 27,
+        "sk": [
+            "delenec"
+        ],
+        "en": [
+            "dividend"
+        ]
+    },
+    "divisor": {
+        "id": 28,
+        "sk": [
+            "deliteľ"
+        ],
+        "en": [
+            "divisor"
+        ]
+    },
+    "leave": {
+        "id": 29,
+        "sk": [
+            "zabudnúť (vec)"
+        ],
+        "en": [
+            "leave"
+        ]
+    },
+    "forget": {
+        "id": 30,
+        "sk": [
+            "zabudnúť (v hlave, niečo urobiť)"
+        ],
+        "en": [
+            "forget"
+        ]
+    },
+    "to a certain extent": {
+        "id": 31,
+        "sk": [
+            "do istej miery"
+        ],
+        "en": [
+            "to a certain extent"
+        ]
+    },
+    "pursuit": {
+        "id": 32,
+        "sk": [
+            "ambícia"
+        ],
+        "en": [
+            "pursuit"
+        ]
+    },
+    "speak up": {
+        "id": 33,
+        "sk": [
+            "hovoriť hlasnejšie"
+        ],
+        "en": [
+            "speak up"
+        ]
+    },
+    "mumble": {
+        "id": 34,
+        "sk": [
+            "mrmlať"
+        ],
+        "en": [
+            "mumble"
+        ]
+    },
+    "clicked with": {
+        "id": 35,
+        "sk": [
+            "zapadajúci s"
+        ],
+        "en": [
+            "clicked with"
+        ]
+    },
+    "come across as": {
+        "id": 36,
+        "sk": [
+            "pripadať ako"
+        ],
+        "en": [
+            "come across as",
+            "come across"
+        ]
+    },
+    "see eye to eye with": {
+        "id": 37,
+        "sk": [
+            "zhodnúť sa s",
+            "zhodnúť sa"
+        ],
+        "en": [
+            "see eye to eye with",
+            "see eye to eye"
+        ]
+    },
+    "half-sister": {
+        "id": 38,
+        "sk": [
+            "nevlastná sestra (spoločná mama)"
+        ],
+        "en": [
+            "half-sister"
+        ]
+    },
+    "step-brother": {
+        "id": 39,
+        "sk": [
+            "nevlastný brat (spoločný otec)"
+        ],
+        "en": [
+            "step-brother"
+        ]
+    }
+}
