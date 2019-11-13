@@ -1,4 +1,4 @@
-class zoznam:
+class polynom:
 
     def __init__(this, *data, k=0, e=0):
         this.koeficient = k
@@ -51,7 +51,7 @@ class zoznam:
 
                 n = c
             else:
-                n = zoznam(k=elem[0], e=elem[1])
+                n = polynom(k=elem[0], e=elem[1])
                 n.pointer = c.pointer
                 c.pointer = n
 
@@ -65,14 +65,14 @@ class zoznam:
         return this.exponent
 
 
-p = zoznam(
+p = polynom(
     (1, 2),
     (4, 5),
     (1, 2),
     (-1, 0),
     (-5, 7),
 )
-q = zoznam(
+q = polynom(
     (2, 1),
     (-7, 2),
     (-4, 5),

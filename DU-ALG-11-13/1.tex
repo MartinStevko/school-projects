@@ -1,5 +1,54 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Tvrdím, že elektrikár musí prejsť najmenej $\lceil\log_2 n\rceil$ ciest 
+po schodoch na identifikáciu $n$ káblov. Dokážem najprv, že toľko 
+vyhovuje a potom, že na menej sa to nedá. Nech elektrikár má dole káble 
+označené $d_1, d_2,\dots, d_n$ a hore $h_1, h_2,\dots,h_n$.
 
+Elektrikár si zoberie $2^{\lceil\log_2 n\rceil-1}$ káblov a spojí ich. 
+Pripojí k nim zdroj a výjde hore, kde postupne ku každej dvojici pripojí 
+žiarovku a ak sa žiarovka rozsvieti, poznačí si obe žiarovky ako spojené 
+v prvom skúšaní. Keď prejde všetkými dvojicami zvyšné si poznačí ako 
+nespojené v prvom skúšaní. Musí ich byť $2^{\lceil\log_2 n\rceil-1}$ a 
+$2^{\lceil\log_2 n\rceil-1}$, pretože toľko ich bolo spojených, pričom 
+tieto sa rozsvietiť museli a žiadne iné sa rozsvietit nemohli
+
+Následne vyberie $2^{\lceil\log_2 n\rceil-2}$ káblov z tých, ktoré si 
+označil ako spojené a $2^{\lceil\log_2 n\rceil-2}$ z tých, ktoré ako 
+nespojené. Všetky ich spojí, poznačí si, ktoré sú spojené a zíjde dole. 
+Pre každú dvojicu káblov pripojí zdroj na jeden, žiarovku na druhý a 
+potom spojí zdroj a žiarovku. Ak sa žiarovka rozsvieti, káble si poznačí 
+ako spojené, ak ani po všetkých dvojicách nebudú označené ako spojené, 
+tak ako nespojené. 
+
+Takto bude pokračovať spolu $\lceil\log_2 n\rceil$--krát, pričom pri 
+$s$--tom skúšaní bude káble vyberať tak, aby vybral 
+$\binom{s-1}{i}\cdot 2^{\lceil\log_2 n\rceil-s-1}$ káblov, ktoré žiarovku rozsvietili 
+$i$--krát pre všetky $i$ prirodzené menšie ako $s$. Týmto dostane spolu 
+zakaždým $2^{\lceil\log_2 n\rceil-1}$ káblov (lebo súčet n--tého riadku 
+v Pascalovom trojuholníku je $2^n$). Tie spojí a pokračuje ako 
+v príkladoch vyššie. Je dôležité uvedomiť si, že vždy (či je hore alebo 
+dole), vie, ktoré káble sa mu rozsvietili, pretože dole vie, ktoré 
+v pokuse keď bol so žiarovkov hore zapojil a teda sa mu hore 
+rozsvietili a vidí, ktoré mu svietili v pokusoch, keď bol dole. Naopak 
+je to analogiské, teda hore vie, ktoré mal spojené keď bol so žiarovkov 
+dole a vidí, ktoré mu svietia keď je hore. 
+
+Takto dostane po $\lceil\log_2 n\rceil$ skúšaniach pre každý kábel pre 
+každé skúšanie, informáciu či žiarovku rozsvietil, alebo nie. Naviac 
+viem, že žiadne 2 káble neboli oba vybraté, alebo oba nevybraté, 
+pre všetky skúšania rovnako, čo zabezpečilo delenie vyššie a počet 
+opakovaní. Potom teda viem každé dva káble jednoznačne odlíšiť. Ostáva 
+dokázať, že ich viem aj priradiť. Avšak na oboch stranách budovy mám 
+káble jednoznačne odlíšené a zároveň viem, pre ktoré vybratia kábel 
+žiarovku rozsvietil, takže podľa poradia viem určiť to, ktorý kábel je 
+ktorý. 
+
+Teraz musím dokázať, že na menej pokusov to nejde. Každým skúšaním viem 
+o kábli dostať len 2 informácie. Rozsvietil niektorú žiarovku, alebo nie. 
+Ak by to malo ísť na $\lceil\log_2 n\rceil-1$ skúšaní, celkovo mám teda 
+len $2^{\lceil\log_2 n\rceil-1}$ informácií o kábli. $n$ je ale väčšie 
+ako $2^{\lceil\log_2 n\rceil-1}$, lebo horná celá časť nikdy nepridá 
+k číslu celú jednotku, takže nedokážem rozlíšiť všetky káble. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
