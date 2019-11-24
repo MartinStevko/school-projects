@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Predpokladajme, že prvky máme uložené v poli. Myšlienkou bude začať 
+zdola a postupne postaviť malé haldy, ktoré sa pospájajú do jednej 
+veľkej až ku koreňu. Postup:
+\begin{enumerate}
+    \item Vyrátam si hĺbku haldy ako $\lceil\log_2 n\rceil$.
+    \item Zoberiem si všetky prvky, ktoré sa vojdú na predošlé poschodia 
+    haldy. Tých bude prvých $2^{\lceil\log_2 n\rceil}-1$ v poli.
+    \item Zoberiem ten najviac vpravo z nich a spravím z neho a prvkov 
+    na pozícii jeho synov ($2i$ a $2i+1$ ak indexujem od 1) malú haldu 
+    sporovnaním veľkostí.
+    \item Posuniem sa o 1 prvok doľava a pokračujem až kým mi nedôjdu 
+    prvky v poli.
+    \item Keď dôjdu, budem mať postavenú haldu zo všetkých prvkov 
+    v poli, pretože pre každý prvok bude platiť, že je v správnej 
+    relácii so všetkými jeho synmi a halda bude plná zhora dole a 
+    zľava doprava.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
