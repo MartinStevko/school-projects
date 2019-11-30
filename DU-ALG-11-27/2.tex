@@ -1,5 +1,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Nezávislosť je naprogramovaná v súbore $nezavislost.py$ a dominancia zase 
+v $dominancia.py$. Oba algoritmy by sa dali optimalizovať ešte viac, 
+ak by som o vstupe vedel viacero údajov -- napríklad, že šachovnica bude 
+štvorcová. Pre rozmery šachovnice $x$ a $y$, typ figúrky ľubovoľný okrem 
+pešiaka a šachovnicu ako pneumatiku sa mi to podarilo optimalizovať 
+najviac takto.
 
+Využil som rekurzívne volanie funkcie na skúšanie všetkých 
+perspektívnych možností, teda tých, ktoré ešte nie sú ohrozené žiadnou 
+figúrkou. Pre každú figúrku som nastavil aj základný matematický 
+invariant, ktorý určuje minimum/maximum, akurát nedokazuje, že je 
+dosiahnuteľné a teda ak program nájde nejaké usporiadanie pre invariant, 
+môže skončiť.
+
+Využité invarianty:
+\begin{itemize}
+    \item v jednom riadku ani stĺpci nemôžu byť 2 veže ani kráľovné,
+    \item na podpolíčku $2\times 2$ nemôžu byť 2 králi,
+    \item každý kôň ohrozuje 8 políčok rozdielnej farby a každé políčko
+    je ohrozované maximálne 8 koňmi
+    \item najdlhšia uhlopriečka prechádza cez počet políčok rovný menšej
+    strane šachovnice
+    \item žiaden kráľ ani kôň neohrozí viac než 8 políčok
+    \item žiadna veža neohrozí 2 riadky ani 2 stĺpce.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

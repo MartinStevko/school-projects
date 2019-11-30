@@ -1,5 +1,46 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Najprv dokážem, že pre konečný počet nádob existuje konečný počet 
+stavov v ktorých môžu byť. Zoberme si 2 nádoby s kapacitami $k$ a $l$ a 
+objemom vody v nich $a$ a $b$. Potom prelievaním viem dostávať iba stavy:
+\begin{itemize}
+    \item $k$ a $a+b-k$,
+    \item $l$ a $a+b-l$,
+    \item $0$ a $a+b$,
+    \item $a$ a $b$ (ak vodu neprelejem).
+\end{itemize}
+Avšak keďže nádob je konečný počet, mám konečný počet kapacít aj objemov 
+a teda aj rôznych možných súčtov objemov, čo znamená, že aj konečný 
+počet stavov.
 
+Potom keďže chcem nájsť najrýchlejší spôsob prelievania, môžem použiť 
+prehľadávanie grafu do šírky, pričom vrcholmi budú stavy nádob a 
+hrany budú popisovať zmenu stavu, ktorú viem spraviť na 1 preliatie.
+(Analogicky cesty grafu na $n$ preliatí.)
+
+Stav v ktorom sa aktuálne nachádzam nech je $S$, pole prejdených stavov 
+nazvem $CLOSED$ a frontu (pole stavov na prejdenie) nazvem $OPENED$. 
+Na začiatku bude $S$ rovné vstupu, $CLOSED$ prázdne a v $OPENED$ bude 
+len $S$. Aloritmus bude vyzerať takto:
+\begin{itemize}
+    \item Začni cyklus, 
+    \item ak je $OPENED$ prázdne, vypíš, že sa prelievaním nedá dostať 
+    do cieleného stavu a skonči, 
+    \item ináč odstráň prvý prvok z $OPENED$, ulož ho do $S$ a pridaj 
+    ho na koniec do $CLOSED$, 
+    \item ak sa v $S$ nachádza nádoba, ktorá má aktuálny objem vody taký, 
+    aký chceme dostať skonči a vypíš počet preliatí na ktoré sme sa 
+    do stavu dostali, ináč pokračuj, 
+    \item pre všetky rôzne dvojice nádob zisti do akého stavu sa 
+    preliatím vieme dostať (vždy to je z pravidla práve 1 stav z vyššie 
+    popísaných) a ak nie je v $OPENED$ ani $CLOSED$, pridaj ho na koniec 
+    do $OPENED$, ak je v $OPENED$ pozri sa na počet preliatí ktorým sa 
+    doň vieme dostať a ak je ten aktuálny počet menší, prepíš ho, 
+    ak je v $CLOSED$ pozri sa na počet preliatí ktorým sa 
+    doň vieme dostať a ak je ten aktuálny počet menší, prepíš ho, 
+    \item pokračuj na začiatok cyklu.
+\end{itemize}
+Takto nájdeme najkratší možný počet preliatí na ktorý sa do výsledného 
+stavu vieme dostať ak existuje.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

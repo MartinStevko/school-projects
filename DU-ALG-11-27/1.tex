@@ -1,5 +1,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Pre nájdenie najdlhšej neklesajúcej vybranej podpostupnosti v $O(n^2)$ 
+budem postupovať od konca postupnsti. Zoberiem posledný nevyriešený 
+prvok a pozriem sa na jeho hodnotu. Nájdem všetky prvky za ním (teda 
+s vyšším indexom), ktoré sú väčšie alebo rovné než on. Vyberiem z nich 
+prvok, ktorý má maximálnu dĺžku vybranej podpostupnosti začínajúcej 
+týmto prvkom, túto hodnotu zvýšim o 1 a uložím k prvku, ktorý práve 
+riešim. 
 
+Týmto som k nemu uložil dĺžku maximálnej neklesajúcej vybranej 
+podpostupnosti začínajúcej týmto prvkom, pretože postupnosť začína ním 
+a pokračovať môže iba väčšími, alebo rovnými prvkami, na ktorých 
+maximálne dĺžky vybraných podpostupností som sa už pozrel. 
+
+Takto vyrátam dĺžky maximálnych vybraných podpostupností pre každý prvok 
+a na konci vyberiem maximum z týchto hodnôt. To je evidentne aj úplné 
+maximum. Ak by sme naviac chceli aj vybrať prvky tejto podpostupnosti, 
+začneme tentokrát zo začiatku, kde si nájdeme prvok s maximálnou 
+hodnotou dĺžky vybranej podpostupnosti, vyberieme ho, nájdeme prvý väčší 
+prípadné rovný prvok s hodnotou o 1 nižšou, vyberieme ho, atď.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
