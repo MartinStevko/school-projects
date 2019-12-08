@@ -2,12 +2,12 @@ import json
 import random
 # import tkinter
 
+dictionary = input("Type (general/ips/pcs): ")
+while dictionary not in ["general", "ips", "pcs"]:
+    print("Wrong input!")
+    dictionary = input("Type (general/ips/pcs): ")
 
-def save_and_exit():
-    print("Good bye!")
-
-
-with open("dict.json", encoding="utf-8") as f:
+with open(dictionary+".json", encoding="utf-8") as f:
     d = json.load(f)
 
 with open("data.json", encoding="utf-8") as f:
@@ -18,7 +18,6 @@ n = 0
 while True:
     key = random.choice(list(d.keys()))
     if q[key] > q[min(q, key=lambda i: q[i])]+1:
-        print(key)
         key = min(q, key=lambda i: q[i])
 
     print(*d[key]["sk"], sep=", ", end=' - ')
@@ -31,7 +30,7 @@ while True:
     if (s+n) % 10 == 0:
         print(f"Správne: {s}\nNesprávne: {n}\n\nPre pokračovanie stlač Enter, ináč napíš 'exit'.")
         if input() == "exit":
-            save_and_exit()
+            print("Good bye!")
             break
 
 with open("data.json", "w", encoding="utf-8") as f:

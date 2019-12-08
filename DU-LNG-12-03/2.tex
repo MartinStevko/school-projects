@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Keďže dimenzia priestoru je 4, musím nájsť ešte 3 vektory. Pozriem sa 
+preto na kanonickú bázu a zistím, ktoré vektory z nej môžem vybrať aby 
+bola celá matica lineárne nezávislá (a keďže bude dimenzia 4, tak to 
+bude báza).
+\[\begin{pmatrix}[c|cccc]
+    1 & 1 & 0 & 0 & 0 \\
+    2 & 0 & 1 & 0 & 0 \\
+    3 & 0 & 0 & 1 & 0 \\
+    4 & 0 & 0 & 0 & 1 \\
+\end{pmatrix}
+~   
+\begin{pmatrix}[c|cccc]
+    1 & 1 & 0 & 0 & 0 \\
+    0 & -2 & 1 & 0 & 0 \\
+    0 & -3 & 0 & 1 & 0 \\
+    0 & -4 & 0 & 0 & 1 \\
+\end{pmatrix}\]
+
+Teraz vidím, že ak vektor $(1,2,3,4)$ doplním vektormi $(0,1,0,0)$, 
+$(0,0,1,0)$ a $(0,0,0,1)$ dostanem 4 lineárne nezávislé vektory. Keďže 
+dimenzia je 4, je to báza.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
