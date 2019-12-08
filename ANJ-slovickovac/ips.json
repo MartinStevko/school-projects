@@ -127,4 +127,497 @@
             "divisor"
         ]
     },
+    "natural numbers": {
+        "id": 29,
+        "sk": [
+            "prirodzené čísla"
+        ],
+        "en": [
+            "natural numbers"
+        ]
+    },
+    "straight line": {
+        "id": 30,
+        "sk": [
+            "priamka"
+        ],
+        "en": [
+            "straight line"
+        ]
+    },
+    "intersect": {
+        "id": 31,
+        "sk": [
+            "priesečník"
+        ],
+        "en": [
+            "intersect"
+        ]
+    },
+    "parallel": {
+        "id": 32,
+        "sk": [
+            "rovnobežné"
+        ],
+        "en": [
+            "parallel"
+        ]
+    },
+    "angle": {
+        "id": 34,
+        "sk": [
+            "uhol"
+        ],
+        "en": [
+            "angle"
+        ]
+    },
+    "area": {
+        "id": 35,
+        "sk": [
+            "obsah"
+        ],
+        "en": [
+            "area"
+        ]
+    },
+    "perpendicular": {
+        "id": 36,
+        "sk": [
+            "kolmé"
+        ],
+        "en": [
+            "perpendicular",
+            "orthogonal"
+        ]
+    },
+    "degree": {
+        "id": 37,
+        "sk": [
+            "stupeň"
+        ],
+        "en": [
+            "degree"
+        ]
+    },
+    "integers": {
+        "id": 38,
+        "sk": [
+            "celé čísla"
+        ],
+        "en": [
+            "integers"
+        ]
+    },
+    "whole numbers": {
+        "id": 39,
+        "sk": [
+            "nezáporné čísla"
+        ],
+        "en": [
+            "whole numbers"
+        ]
+    },
+    "two point three": {
+        "id": 40,
+        "sk": [
+            "2.3"
+        ],
+        "en": [
+            "two point three"
+        ]
+    },
+    "x over y": {
+        "id": 41,
+        "sk": [
+            "x/y"
+        ],
+        "en": [
+            "ex over váj",
+            "x over y"
+        ]
+    },
+    "is equal to": {
+        "id": 42,
+        "sk": [
+            "="
+        ],
+        "en": [
+            "is equal to"
+        ]
+    },
+    "approximately": {
+        "id": 43,
+        "sk": [
+            "približne"
+        ],
+        "en": [
+            "approximately"
+        ]
+    },
+    "asterisk": {
+        "id": 44,
+        "sk": [
+            "*"
+        ],
+        "en": [
+            "asterisk"
+        ]
+    },
+    "absolute value": {
+        "id": 45,
+        "sk": [
+            "absolútna hodnota"
+        ],
+        "en": [
+            "absolute value"
+        ]
+    },
+    "ten choose nine": {
+        "id": 46,
+        "sk": [
+            "10 nad 9 (kombinačné číslo)",
+            "10 nad 9"
+        ],
+        "en": [
+            "ten choose nine",
+            "binomal ten over nine"
+        ]
+    },
+    "x double-dashed": {
+        "id": 47,
+        "sk": [
+            "x s dvoma dĺžňami"
+        ],
+        "en": [
+            "x double-dashed",
+            "x double dashed",
+            "ex double dashed"
+        ]
+    },
+    "x hat": {
+        "id": 48,
+        "sk": [
+            "x so strieškou"
+        ],
+        "en": [
+            "x hat",
+            "ex hat"
+        ]
+    },
+    "is greater than": {
+        "id": 49,
+        "sk": [
+            "je väčšie ako"
+        ],
+        "en": [
+            "is greater than"
+        ]
+    },
+    "tilde": {
+        "id": 50,
+        "sk": [
+            "tilda"
+        ],
+        "en": [
+            "tilde"
+        ]
+    },
+    "coordinates": {
+        "id": 51,
+        "sk": [
+            "súradnice"
+        ],
+        "en": [
+            "coordinates"
+        ]
+    },
+    "ray": {
+        "id": 52,
+        "sk": [
+            "polpriamka"
+        ],
+        "en": [
+            "ray"
+        ]
+    },
+    "arc": {
+        "id": 53,
+        "sk": [
+            "oblúk"
+        ],
+        "en": [
+            "arc"
+        ]
+    },
+    "is congruent to": {
+        "id": 54,
+        "sk": [
+            "je kongruentné k"
+        ],
+        "en": [
+            "is congruent to"
+        ]
+    },
+    "distance": {
+        "id": 55,
+        "sk": [
+            "vzdialenosť"
+        ],
+        "en": [
+            "distance"
+        ]
+    },
+    "curve": {
+        "id": 56,
+        "sk": [
+            "krivka"
+        ],
+        "en": [
+            "curve"
+        ]
+    },
+    "is identical with": {
+        "id": 57,
+        "sk": [
+            "trojito sa rovná s"
+        ],
+        "en": [
+            "is identical with"
+        ]
+    },
+    "oblique line": {
+        "id": 58,
+        "sk": [
+            "naklonená priamka"
+        ],
+        "en": [
+            "oblique line"
+        ]
+    },
+    "line segment": {
+        "id": 59,
+        "sk": [
+            "úsečka"
+        ],
+        "en": [
+            "line segment"
+        ]
+    },
+    "equidistant": {
+        "id": 60,
+        "sk": [
+            "ekvidištanta"
+        ],
+        "en": [
+            "equidistant"
+        ]
+    },
+    "set": {
+        "id": 61,
+        "sk": [
+            "množina"
+        ],
+        "en": [
+            "set"
+        ]
+    },
+    "transversal": {
+        "id": 62,
+        "sk": [
+            "rôznobežka"
+        ],
+        "en": [
+            "transversal"
+        ]
+    },
+    "intersect at": {
+        "id": 63,
+        "sk": [
+            "pretínajú sa v"
+        ],
+        "en": [
+            "intersect at"
+        ]
+    },
+    "vertex": {
+        "id": 64,
+        "sk": [
+            "vrchol"
+        ],
+        "en": [
+            "vertex"
+        ]
+    },
+    "acute angle": {
+        "id": 65,
+        "sk": [
+            "ostrý uhol"
+        ],
+        "en": [
+            "acute angle"
+        ]
+    },
+    "obtuse angle": {
+        "id": 66,
+        "sk": [
+            "tupý uhol"
+        ],
+        "en": [
+            "obtuse angle"
+        ]
+    },
+    "reflex angle": {
+        "id": 67,
+        "sk": [
+            "nekonvexný uhol"
+        ],
+        "en": [
+            "reflex angle"
+        ]
+    },
+    "vertically opposite": {
+        "id": 68,
+        "sk": [
+            "vrcholové"
+        ],
+        "en": [
+            "vertically opposite"
+        ]
+    },
+    "corresponding": {
+        "id": 69,
+        "sk": [
+            "súhlasné"
+        ],
+        "en": [
+            "corresponding"
+        ]
+    },
+    "alternate": {
+        "id": 70,
+        "sk": [
+            "striedavé"
+        ],
+        "en": [
+            "alternate"
+        ]
+    },
+    "adjacent": {
+        "id": 71,
+        "sk": [
+            "susedné"
+        ],
+        "en": [
+            "adjacent"
+        ]
+    },
+    "interior": {
+        "id": 72,
+        "sk": [
+            "susedný k súhlasnému"
+        ],
+        "en": [
+            "interior"
+        ]
+    },
+    "complementary": {
+        "id": 73,
+        "sk": [
+            "spolu 90°"
+        ],
+        "en": [
+            "complementary"
+        ]
+    },
+    "supplementary": {
+        "id": 74,
+        "sk": [
+            "spolu 180°"
+        ],
+        "en": [
+            "supplementary"
+        ]
+    },
+    "-es (analyses)": {
+        "id": 75,
+        "sk": [
+            "-is [íz] (analisis)"
+        ],
+        "en": [
+            "-es (analyses)"
+        ]
+    },
+    "axis": {
+        "id": 76,
+        "sk": [
+            "os"
+        ],
+        "en": [
+            "axis"
+        ]
+    },
+    "-a (criteria)": {
+        "id": 77,
+        "sk": [
+            "-on [a] (criterion)"
+        ],
+        "en": [
+            "-a (criteria)"
+        ]
+    },
+    "-ae (formulae)": {
+        "id": 78,
+        "sk": [
+            "-a (formula)"
+        ],
+        "en": [
+            "-ae (formulae)"
+        ]
+    },
+    "-a (data)": {
+        "id": 79,
+        "sk": [
+            "-um (datum)"
+        ],
+        "en": [
+            "-a (data)"
+        ]
+    },
+    "-ices (indices)": {
+        "id": 80,
+        "sk": [
+            "-ix/-ex (index)"
+        ],
+        "en": [
+            "-ices (indices)"
+        ]
+    },
+    "-i (radii)": {
+        "id": 81,
+        "sk": [
+            "-us (radius)"
+        ],
+        "en": [
+            "-i (radii)"
+        ]
+    },
+    "-ata (lemmata)": {
+        "id": 82,
+        "sk": [
+            "-a lemma"
+        ],
+        "en": [
+            "-ata (lemmata)"
+        ]
+    },
+    "-era/-ora (corpora)": {
+        "id": 83,
+        "sk": [
+            "-us (corpus)"
+        ],
+        "en": [
+            ""
+        ]
+    }
 }
