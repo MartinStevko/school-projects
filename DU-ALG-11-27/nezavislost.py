@@ -88,7 +88,7 @@ ch_set = [
     [(1, 0), (0, 1)],
 ]
 
-# popis policok kam sa z aktualneho viem zvolenou figurkou dostat a 
+# popis policok kam sa z aktualneho viem zvolenou figurkou dostat a
 # maximum figurok (nie nutne dosiahnutelne)
 if chessman == 'kral':
     moves, vector, max_c = ch_set[0], False, (width*height+3)//4

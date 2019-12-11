@@ -11,14 +11,29 @@ existovať žiadna hrana, kde som už bol (to by som našiel kružnicu).
 
 Naviac viem povedať, že ak v grafe neexistuje kružnica, existujú tam 
 aspoň 2 listy. Ak by totiž existoval iba jeden, zažnem v ňom a 
-zopakujem rovnakú úvahu ako vyššie, čím dôjdem k ďalšiemu. Ak existujú 
-aspoň 2 listy, viem ich odobrať a úlohu mám dokázanú. 
+zopakujem rovnakú úvahu ako vyššie, čím dôjdem k ďalšiemu. 
 
-Ak nie, mám tam 
-kružnicu. Vyberiem teda jeden bod kružnice a znova tam mám buď list, 
-alebo kružnicu. Potom vyberiem aj tento list/bod kružnice. Viem, že 
-graf ostal súvislý po odobraní 2 vrcholov, bol súvislý po odobraní 
-aj iba prvého a bude súvislý aj po odobraní iba druhého, lebo pridám 
-aspoň 2 hrany, ktoré nemôžu ísť do toho istého vrcholu.
+% Ak nie, mám tam kružnicu. Ak existuje bod tejto kružnice, ktorý nie 
+% je spojený so žiadnym bodom mimo kružnice, vyberiem ten a potom mám 
+% istotu, že sa spojitosť nerozpadne (pretože nijaká hrana mimo kružnice 
+% nezanikne). Ak taký bod neexistuje, potom je každý jej bod spojený 
+% s aspoň jedným bodom mimo kružnice. Pomyselne teda môžem celú kružnicu 
+% a jej body stlačiť do jedného, pretože ak by sa spojitosť rozpadla 
+% po odobraní nejakého bodu, určite sa rozpadne aj po odobratí celej 
+% kružnice. Následne úvahu zopakujem od začiatku, až kým nenájdem vhodné 
+% vrcholy. Vyberiem teda jeden bod kružnice a znova tam mám buď list, 
+% alebo kružnicu. Potom vyberiem aj tento list/bod kružnice. Viem, že 
+% graf ostal súvislý po odobraní 2 vrcholov, bol súvislý po odobraní 
+% aj iba prvého a bude súvislý aj po odobraní iba druhého, lebo pridám 
+% aspoň 2 hrany, ktoré nemôžu ísť do toho istého vrcholu.
+
+Keďže graf je súvislý, má kostru. Potom ak je kostra minimálna, môžem 
+pokračovať, ak nie, môžem odobrať nejaké hrany a jednu z minimálnych 
+kostier grafu dostať, pričom ostal súvislý. Keďže je to minimálna kostra 
+grafu, neexistuje v nej žiadna kružnica. Potom tam ale musia existovať 
+aspoň 2 listy, ktoré môžem vybrať. Súvislosť sa mi nijako nerozpadne, 
+pretože pre moju kostru boli tieto vrcholy listami a pôvodný graf sa 
+od stále súvislej kostry líšil iba pridaním niektorých hrán (čím sa 
+súvislosť zjavne nepokazí).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

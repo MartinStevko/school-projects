@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Vytvorím si 2 polia, ktoré budem používať ako zásobníky. V jednom budem 
+udržiavať nevyhodnotené znamienka a v druhom nevyhodnotené čísla. 
+
+Vstup budem čítať po znakoch, ak dostanem znamienko pozriem sa čo je 
+na vrchu zásobníku. Ak je to znamienko s vyššou alebo rovnakou prioritou, 
+vyhodnotím najprv to a potom zopakujem pokus o vloženie, až kým ho 
+nevložím. Ak prečítam zo vstupu ľavú zátvorku, dám ju ku znamienkam, ak 
+pravú, nájdem jej ľavú zátvorku v zásobníku a vyhodnotím znamienka medzi 
+nimi. Ak dostanem číslo, vložím ho do zásobníka. Následne, akonáhle 
+prečítam celý vstup, vyhodnotím každé znamienko v zásobníku postupne.
+
+Zátvorku budem považovať za najvyššiu prioritu.
+
+Program je v súbore "infix.py". Ako znamienka môžu byť uvedené $+$, $-$, 
+$*$ a $/$, pričom delenie je len celočíselné (no nie je problém rozšíriť 
+na klasické, akurát by som musel celý čas rátať s typom float). Výraz 
+môže takisto obsahovať ľubovoľné uzátvorkovanie, ale iba z okrúhlych 
+zátvoriek $($, $)$ (pre jednoduchosť). Čísla môžu byť ľubovoľné kladné, 
+záporné program na vstupe nezvládne, avšak rátať s nimi dokáže.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

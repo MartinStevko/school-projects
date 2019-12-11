@@ -145,13 +145,13 @@
             "straight line"
         ]
     },
-    "intersect": {
+    "intersection": {
         "id": 31,
         "sk": [
             "priesečník"
         ],
         "en": [
-            "intersect"
+            "intersection"
         ]
     },
     "parallel": {
@@ -350,15 +350,6 @@
             "arc"
         ]
     },
-    "is congruent to": {
-        "id": 54,
-        "sk": [
-            "je kongruentné k"
-        ],
-        "en": [
-            "is congruent to"
-        ]
-    },
     "distance": {
         "id": 55,
         "sk": [
@@ -420,6 +411,15 @@
         ],
         "en": [
             "set"
+        ]
+    },
+    "is congruent to": {
+        "id": 54,
+        "sk": [
+            "je kongruentné k"
+        ],
+        "en": [
+            "is congruent to"
         ]
     },
     "transversal": {
@@ -617,7 +617,7 @@
             "-us (corpus)"
         ],
         "en": [
-            ""
+            "-era/-ora (corpora)"
         ]
     }
 }
