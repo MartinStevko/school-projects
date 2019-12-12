@@ -10,7 +10,13 @@ while s != 'exit':
         v = ''
     else:
         for i in s.split():
-            v += f' {i} &'
+            try:
+                int(i)
+            except:
+                a, b = i.split('/')
+                v += ' \\frac{'+a+'}{'+b+'} &'
+            else:
+                v += f' {i} &'
         v = v[:-1]+'\\\\'+'\n'
 
     s = input()

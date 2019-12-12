@@ -1,5 +1,96 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riesenie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\begin{enumerate}
+    \item Matica prechodu od bázy $B$ do kanoickej vyzerá ako 
+    $${}_{K}[id]_{B}=
+    \begin{pmatrix}
+        1 & 0 & 2 \\
+        1 & 1 & 0 \\
+        1 & -1 & 1 \\
+    \end{pmatrix}$$
+    \item Matica prechodu od bázy $B'$ do kanoickej vyzerá ako
+    $${}_{K}[id]_{B'}=
+    \begin{pmatrix}
+        3 & 1 & 1 \\
+        2 & 0 & 2 \\
+        2 & 1 & 2 \\
+    \end{pmatrix}$$
+    avšak my chceme maticu opačného prechodu, takže musím nájsť jej inverz
+    \[\begin{pmatrix}[ccc|ccc]
+        3 & 1 & 1 & 1 & 0 & 0 \\
+        2 & 0 & 2 & 0 & 1 & 0 \\
+        2 & 1 & 2 & 0 & 0 & 1 \\
+      \end{pmatrix}
+      \sim
+      \begin{pmatrix}[ccc|ccc]
+        6 & 2 & 2 & 2 & 0 & 0 \\
+        2 & 0 & 2 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 & -1 & 1 \\
+      \end{pmatrix}
+      \sim
+      \begin{pmatrix}[ccc|ccc]
+        0 & 2 & -4 & 2 & -3 & 0 \\
+        2 & 0 & 2 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 & -1 & 1 \\
+      \end{pmatrix}
+      \sim\]
+    \[\sim
+      \begin{pmatrix}[ccc|ccc]
+        2 & 0 & 2 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 & -1 & 1 \\
+        0 & 2 & -4 & 2 & -3 & 0 \\
+      \end{pmatrix}
+      \sim
+      \begin{pmatrix}[ccc|ccc]
+        -2 & 0 & 2 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 & -1 & 1 \\
+        0 & 0 & -4 & 2 & -1 & -2 \\
+      \end{pmatrix}
+      \sim
+      \begin{pmatrix}[ccc|ccc]
+        1 & 0 & 0 & \frac{1}{2} & \frac{1}{4} & -\frac{1}{2} \\
+        0 & 1 & 0 & 0 & -1 & 1 \\
+        0 & 0 & 1 & -\frac{1}{2} & \frac{1}{4} & \frac{1}{2} \\
+      \end{pmatrix}\]
+    \item Matica prechodu od bázy $B$ do bázy $B'$ potom vyzerá ako
+    \[\begin{pmatrix}
+        \frac{1}{2} & \frac{1}{4} & -\frac{1}{2} \\
+        0 & -1 & 1 \\
+        -\frac{1}{2} & \frac{1}{4} & \frac{1}{2} \\
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 & 0 & 2 \\
+        1 & 1 & 0 \\
+        1 & -1 & 1 \\
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        \frac{1}{4} & \frac{3}{4} & \frac{1}{2} \\
+        0 & -2 & 1 \\
+        \frac{1}{4} & -\frac{1}{4} & -\frac{1}{2} \\
+      \end{pmatrix}\]
+    \item Ak teda máme zistiť súradnice vektora v báze $B'$, pričom 
+    poznáme tie v báze $B$, stačí nám ho zľava vynásobiť maticou 
+    prechodu.
+    \[\begin{pmatrix}
+        \frac{1}{4} & \frac{3}{4} & \frac{1}{2} \\
+        0 & -2 & 1 \\
+        \frac{1}{4} & -\frac{1}{4} & -\frac{1}{2} \\
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 \\
+        2 \\
+        0 \\
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        \frac{7}{4} \\
+        -4 \\
+        -\frac{1}{4} \\
+      \end{pmatrix}\]
+    Tieto súradnice v báze $B'$ reprezentujú vektor $(1, 3, -1)$, ktorý 
+    odpovedá vektoru zo zadania, takže matica prechodu aj súradnice sú 
+    správne.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
