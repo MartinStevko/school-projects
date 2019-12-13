@@ -4,79 +4,80 @@ import id_api
 class AllocatorId:
 
     def __init__(self, n):
-        self.free = id_api.IAllocatorId(1, n)
-        self.allocated = None
+        self.array = []
+        self.array.append(
+            id_api.IAllocatorId(n=1)
+        )
+        for i in range(1, n-1):
+            self.array.append(
+                id_api.IAllocatorId(p=i-1, n=i+1)
+            )
+        self.array.append(
+            id_api.IAllocatorId(p=n-1)
+        )
+
+        self.free = 0
+        self.allc = None
 
     def get(self):
         if self.free is not None:
-            f = self.free
-            f.allocated = True
-            self.free = f.next
-            f.next.prev = None
+            i = self.free
+            self.array[i].allocated = True
+            self.free = self.array[i].next
+            self.array[self.array[i].next].prev = None
         else:
             raise Exception('No ID is free right now.')
 
-        if self.allocated is not None:
-            f.next = self.allocated
-            self.allocated.prev = f
-            self.allocated = f
+        if self.allc is not None:
+            self.array[i].next = self.allc
+            self.array[self.allc].prev = i
+            self.allc = i
         else:
-            f.next = None
-            self.allocated = f
+            self.array[i].next = None
+            self.allc = i
 
-        return f.N
+        return i
 
     def back(self, id):
-        ##### Dostanie ID namiesto cisla #####
-        n = self.allocated
-        while n is not None and n.N != id:
-            n = n.next
-        else:
-            if n is None:
-                raise Exception('This ID is free and can not be returned back.')
-            else:
-                id = n
-        ######################################
-
-        if not id.allocated:
+        if not self.array[id].allocated:
             raise Exception('This ID is free and can not be returned back.')
 
-        id.allocated = False
-        if id.next is None and id.prev is None:
-            self.allocated = None
-        elif id.next is None:
-            id.prev.next = None
-            id.prev = None
-        elif id.prev is None:
-            id.next.prev = None
-            self.allocated = id.next
+        self.array[id].allocated = False
+        if self.array[id].next is None and self.array[id].prev is None:
+            self.allc = None
+        elif self.array[id].next is None:
+            self.array[self.array[id].prev].next = None
+            self.array[id].prev = None
+        elif self.array[id].prev is None:
+            self.array[self.array[id].next].prev = None
+            self.allc = self.array[id].next
         else:
-            id.next.prev = id.prev
-            id.prev.next = id.next
-            id.prev = None
+            self.array[self.array[id].next].prev = self.array[id].prev
+            self.array[self.array[id].prev].next = self.array[id].next
+            self.array[id].prev = None
 
         if self.free is not None:
-            id.next = self.free
-            self.free.prev = id
+            self.array[id].next = self.free
+            self.array[self.free].prev = id
         else:
-            id.next = None
+            self.array[id].next = None
 
         self.free = id
 
     def get_alives(self):
         out = []
-        n = self.allocated
-        while n is not None:
-            out.append(n.N)
-            n = n.next
+        i = self.allc
+        while i is not None:
+            out.append(i)
+            i = self.array[i].next
 
         return out
 
     def get_deads(self):
         out = []
-        n = self.free
-        while n is not None:
-            out.append(n.N)
-            n = n.next
+        i = self.free
+        while i is not None:
+            out.append(i)
+            i = self.array[i].next
 
         return out

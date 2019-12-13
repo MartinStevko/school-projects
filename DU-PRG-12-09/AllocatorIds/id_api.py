@@ -1,14 +1,9 @@
 class IAllocatorId:
-    N = 0
     allocated = False
 
-    def __init__(self, n, m, prev=None):
-        self.N = n
-        self.prev = prev
-        if m > n:
-            self.next = IAllocatorId(n+1, m, self)
-        else:
-            self.next = None
+    def __init__(self, p=None, n=None):
+        self.prev = p
+        self.next = n
 
     def get(self):
         NotImplemented
