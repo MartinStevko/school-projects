@@ -1,0 +1,174 @@
+{
+    "go to great lengths": {
+        "id": 0,
+        "sk": [
+            "ísť do detailov",
+            "dať si záležať"
+        ],
+        "en": [
+            "go to great lengths",
+            "went to great lengths"
+        ]
+    },
+    "going away": {
+        "id": 1,
+        "sk": [
+            "odísť (na dlho)",
+            "odísť"
+        ],
+        "en": [
+            "go away",
+            "going away"
+        ]
+    },
+    "going on": {
+        "id": 2,
+        "sk": [
+            "diať sa"
+        ],
+        "en": [
+            "going on"
+        ]
+    },
+    "go for": {
+        "id": 3,
+        "sk": [
+            "vybrať niečo",
+            "ísť po niečom"
+        ],
+        "en": [
+            "go for"
+        ]
+    },
+    "go back on": {
+        "id": 4,
+        "sk": [
+            "nesplniť",
+            "nedodržať"
+        ],
+        "en": [
+            "go back on"
+        ]
+    },
+    "go down with": {
+        "id": 5,
+        "sk": [
+            "zhoršiť sa v"
+        ],
+        "en": [
+            "go down with"
+        ]
+    },
+    "make a go of": {
+        "id": 6,
+        "sk": [
+            "rozbehnúť niečo"
+        ],
+        "en": [
+            "make a go of"
+        ]
+    },
+    "have a go": {
+        "id": 7,
+        "sk": [
+            "skúsiť si",
+            "dostať sa na rad"
+        ],
+        "en": [
+            "have a go"
+        ]
+    },
+    "on the go": {
+        "id": 8,
+        "sk": [
+            "byť na nohách",
+            "zaneprázdnený"
+        ],
+        "en": [
+            "on the go"
+        ]
+    },
+    "go without saying": {
+        "id": 9,
+        "sk": [
+            "je to jasné"
+        ],
+        "en": [
+            "go without saying"
+        ]
+    },
+    "take over": {
+        "id": 10,
+        "sk": [
+            "prevziať"
+        ],
+        "en": [
+            "take over"
+        ]
+    },
+    "take my breath away": {
+        "id": 11,
+        "sk": [
+            "zaskočiť"
+        ],
+        "en": [
+            "take my breath away"
+        ]
+    },
+    "take in my stride": {
+        "id": 12,
+        "sk": [
+            "poradiť si",
+            "zobrať so sebou"
+        ],
+        "en": [
+            "take in my stride"
+        ]
+    },
+    "take it for granted": {
+        "id": 13,
+        "sk": [
+            "brať za samozrejmé"
+        ],
+        "en": [
+            "take it for granted"
+        ]
+    },
+    "take to": {
+        "id": 14,
+        "sk": [
+            "obľúbiť si"
+        ],
+        "en": [
+            "take to"
+        ]
+    },
+    "take a part in": {
+        "id": 15,
+        "sk": [
+            "hrať rolu v",
+            "zúčastniť sa"
+        ],
+        "en": [
+            "take a part in"
+        ]
+    },
+    "take in": {
+        "id": 16,
+        "sk": [
+            "porozumieť"
+        ],
+        "en": [
+            "take in"
+        ]
+    },
+    "take off": {
+        "id": 17,
+        "sk": [
+            "začať mať úspech"
+        ],
+        "en": [
+            "take off"
+        ]
+    }
+}

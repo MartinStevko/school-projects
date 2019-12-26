@@ -20,11 +20,15 @@ class AllocatorId:
         self.allc = None
 
     def get(self):
-        if self.free is not None:
+        if self.free is not None and self.array[self.free].next is not None:
             i = self.free
             self.array[i].allocated = True
             self.free = self.array[i].next
             self.array[self.array[i].next].prev = None
+        elif self.free is not None:
+            i = self.free
+            self.array[i].allocated = True
+            self.free = self.array[i].next
         else:
             raise Exception('No ID is free right now.')
 

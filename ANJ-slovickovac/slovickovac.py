@@ -2,8 +2,8 @@ import json
 import random
 
 # Vyber typu skusania
-dictionary = input("Type (general/ips/pcs): ")
-while dictionary not in ["general", "ips", "pcs"]:
+dictionary = input("Type (general/ips/pcs/frazal): ")
+while dictionary not in ["general", "ips", "pcs", "frazal"]:
     print("Wrong input!")
     dictionary = input("Type (general/ips/pcs): ")
 

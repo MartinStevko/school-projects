@@ -92,6 +92,24 @@ def test03():
     print("TEST 03 PASSED")
 
 
+def test05():
+    alloc = ids.AllocatorId(100)
+    id1 = alloc.get()
+    for i in range(1000):
+        t_ids = []
+        for _ in range(i % 100):
+            t_ids.append(alloc.get())
+
+        for j in t_ids:
+            alloc.back(j)
+
+    alive = alloc.get_alives()
+
+    if check_same([id1], alive):
+        print("TEST 05 PASSED")
+
+
 test01()
 test02()
 test03()
+test05()
